@@ -1,0 +1,18 @@
+# Goal
+
+- [ In-memory Key-Value Store ]
+  - [ Strings ]
+  - [ Lists ]
+  - [ Sets ]
+  - [ Sorted Sets ]
+  - [ Hashes ]
+  - [ Streams ]
+- [ Persistence ]
+  - [ Snapshot Persistence ]
+  - [ Append-only File Persistence ]
+- [ TTL ]
+- [ Pub/Sub ]
+- [ Client/Server Architecture ]
+- [ Event loop for I/O Multiplexing ]
+- [ Single-threaded ]
+- [ Atomic Operations (INCR, INCRBY, DECR, DECRBY, etc.) ]
