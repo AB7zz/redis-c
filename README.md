@@ -1,4 +1,4 @@
-# Goal
+# Goals
 
 - [ In-memory Key-Value Store ]
   - [ Strings ]
