@@ -19,7 +19,7 @@ GET mykey
 
 ## Data Types
 - [ ] In-memory Key-Value Store
-  - [ ] Strings (SET/GET)
+  - [x] Strings (SET/GET)
   - [ ] Lists (LPUSH/RPUSH/LPOP/RPOP)
   - [ ] Sets (SADD/SREM/SMEMBERS)
   - [ ] Sorted Sets (ZADD/ZREM/ZRANGE)
