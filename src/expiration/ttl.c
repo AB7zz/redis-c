@@ -1,6 +1,8 @@
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 #include "expiration.h"
+#include "kv_store.h"
 
 typedef struct {
     char *key;
