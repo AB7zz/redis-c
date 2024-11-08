@@ -53,9 +53,14 @@ void handle_client(int client_fd) {
         printf("[Server] Received command: %s\n", buffer);
 
         char *response = process_command(buffer);
-        printf("[Server] Sending response: %s", response);
+        printf("[Server] Sending response: %s\n", response);
         
-        send(client_fd, response, strlen(response), 0);
+        if (response[strlen(response) - 1] != '\n') {
+            send(client_fd, response, strlen(response), 0);
+            send(client_fd, "\n", 1, 0);
+        } else {
+            send(client_fd, response, strlen(response), 0);
+        }
     }
     
     close(client_fd);

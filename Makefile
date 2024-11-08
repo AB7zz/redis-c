@@ -9,3 +9,9 @@ $(TARGET): $(OBJ)
 
 clean:
 	rm -f $(OBJ) $(TARGET)
+
+run-server:
+	./build/myredis
+
+run-client:
+	nc localhost 6379
