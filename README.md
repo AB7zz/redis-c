@@ -1,3 +1,14 @@
+# MyRedis
+
+A simple Redis clone implemented in C.
+
+# How to run
+```
+make
+make run-server
+make run-client
+```
+
 # Redis Clone Implementation Checklist
 
 ## Data Types
