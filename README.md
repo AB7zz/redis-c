@@ -9,6 +9,12 @@ make run-server
 make run-client
 ```
 
+# How to use
+```
+SET mykey "Hello, World!"
+GET mykey
+```
+
 # Redis Clone Implementation Checklist
 
 ## Data Types
