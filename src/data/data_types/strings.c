@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "kv_store.h"
+#include "expiration.h"
 
 typedef struct {
     char *key;
@@ -40,6 +41,17 @@ void set(const char *key, const char *value ){
 char *get(const char *key){
     unsigned int index = hash(key);
     StringEntry *entry = table[index];
+
+    if (is_expired(key)){
+        if (entry){
+            free(entry->key);
+            free(entry->value);
+            free(entry);
+            table[index] = NULL;
+        }
+        remove_expiry(key);
+        return NULL;
+    }
 
     if(entry && strcmp(entry->key, key) == 0){
         return entry->value;
